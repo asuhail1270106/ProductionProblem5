@@ -40,7 +40,13 @@
       <h2 id="textoutput" class="center">Show results here</h2>
     </div>
     <script type="text/javascript">
-		
+      document.getElementById('entrybutton').addEventListener("click", displayMessage); //add an event listener to the 'entrybutton' element
+      function displayMessage() 
+      {
+        var acceptMessage = document.getElementById('entryinput').value; //store inputted text into variable
+        alert("Abdullah Suhail: " + acceptMessage); //give an alert that displays inputted text
+        document.getElementById('textoutput').innerHTML = acceptMessage; //
+      }
     </script>
   </body>
 </html>
